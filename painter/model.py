@@ -50,3 +50,25 @@ class Triangle:
         return f"Triangle with vertices at ({self.point_1.x}, {self.point_1.y}), ({self.point_2.x}, {self.point_2.y}) \
         and ({self.point_3.x}, {self.point_3.y})"
 
+
+class Rectangle:
+
+    def __init__(self, point_1: Point, point_2: Point):
+        self.point_1: Point = point_1
+        self.point_2: Point = point_2
+
+    def area(self) -> float:
+        return abs((self.point_1.x - self.point_2.x) * (self.point_1.y * self.point_2.y))
+
+    def draw(self):
+        x = [self.point_1.x, self.point_2.x, self.point_2.x, self.point_1.x, self.point_1.x]
+        y = [self.point_1.y, self.point_1.y, self.point_2.y, self.point_2.y, self.point_1.y]
+        plt.fill(x, y, color='g')
+        plt.axis("scaled")
+        plt.show()
+
+    def __str__(self):
+        return f"Rectangle with vertices at ({self.point_1.x}, {self.point_1.y}) \
+        and ({self.point_2.x}, {self.point_2.y})"
+
+
