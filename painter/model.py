@@ -41,16 +41,15 @@ class Triangle:
                          (self.point_3.x * self.point_1.y - self.point_3.x * self.point_2.y))
 
     def draw(self):
-        x = [self.point_1.x, self.point_2.x, self.point_2.x, self.point_1.x, self.point_1.x]
-        y = [self.point_1.y, self.point_1.y, self.point_2.y, self.point_2.y, self.point_1.y]
-        plt.fill(x, y, color='g')
+        x = [self.point_1.x, self.point_2.x, self.point_3.x, self.point_1.x]
+        y = [self.point_1.y, self.point_2.y, self.point_3.y, self.point_1.y]
+        plt.fill(x, y, color='b')
         plt.axis("scaled")
         plt.show()
 
-
     def __str__(self) -> str:
-        return f"Triangle with vertices at ({self.point_1.x}, {self.point_1.y}), ({self.point_2.x}, {self.point_2.y})"\
-        f", and ({self.point_3.x}, {self.point_3.y})"
+        return f"Triangle with vertices at ({self.point_1.x}, {self.point_1.y}), ({self.point_2.x}, {self.point_2.y})" \
+               f", and ({self.point_3.x}, {self.point_3.y})"
 
 
 class Rectangle:
@@ -71,7 +70,7 @@ class Rectangle:
 
     def __str__(self):
         return f"Rectangle with vertices at ({self.point_1.x}, {self.point_1.y})" \
-        f" and ({self.point_2.x}, {self.point_2.y})"
+               f" and ({self.point_2.x}, {self.point_2.y})"
 
 
 class Painter:
