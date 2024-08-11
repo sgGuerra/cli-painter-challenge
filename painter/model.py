@@ -6,13 +6,16 @@ class Point:
         self.x: float = x
         self.y: float = y
 
+
 class Circle:
     def __init__(self, center: Point, radius: float):
-        self.center = center
-        self.radius = radius
+        self.center: Point = center
+        self.radius: float = radius
+
 
     def area(self):
         return float(math.pi*(self.radius**2))
+
 
     def draw(self):
         circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
@@ -20,8 +23,10 @@ class Circle:
         plt.axis("scaled")
         plt.show()
 
+
     def __str__(self):
-        return f"Circle with center at ({self.x}, {self.y}) and radius {self.radius}"
+        return f"Circle with center at ({self.center.x}, {self.center.y}) and radius {self.radius}"
+
 
 class Triangle:
     def __init__(self,point_1: Point, point_2: Point, point_3: Point ):
@@ -29,7 +34,9 @@ class Triangle:
         self.point_2 = point_2
         self.point_3 = point_3
 
+
     def area(self):
+
 
 
 
